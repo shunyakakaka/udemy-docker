@@ -1,9 +1,0 @@
-FROM ruby:3.0.3
-RUN apt update -qq && apt install -y build-essential libpq-dev postgresql-client nodejs npm
-RUN npm install -g yarn
-RUN mkdir rails_app
-WORKDIR rails_app
-COPY Gemfile rails_app/Gemfile
-COPY Gemfile.lock rails_app/Gemfile.lock
-RUN bundle install
-COPY . /rails_app/
