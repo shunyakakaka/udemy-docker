@@ -1,0 +1,2 @@
+FROM ruby:3.0.3
+RUN apt update -qq && apt install -y build-essential libpq-dev postgresql-client nodejs npm && npm install yarn
